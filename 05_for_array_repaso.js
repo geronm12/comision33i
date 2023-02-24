@@ -120,10 +120,12 @@ let pot = 2;
 for (let index = 1; index < 8; index++) {
      pot = pot * 2;
 }
+
 let potB = 1;
 for (let index = 1; index < 8; index++) {
      pot = pot * 2;
 }
+
 let potC = 2;
 for (let index = 1; index < 7; index++) {
      pot = pot * 2;
