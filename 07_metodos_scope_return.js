@@ -1,30 +1,3 @@
-// let respuesta;
-
-// //do {
-// respuesta = prompt(
-//   "Ingrese la opción que desea:  1 - Agregar Producto, 2 - Listar Producto, 3 - Buscar un producto en el carrito, 4 - Eliminar Producto, 5 - Salir "
-// );
-// console.log(respuesta);
-// respuesta = Number(respuesta);
-// console.log(respuesta);
-// switch (respuesta) {
-//   case 1:
-//     console.log("agregar producto");
-//     console.log("producto agregado");
-//     break;
-
-//   default:
-//     break;
-// }
-// //} while (respuesta !== 5);
-
-// let vector = [];
-
-// let elemento = prompt("Ingrese el nombre de un producto");
-// vector.push(elemento);
-
-// console.log(vector);
-
 //#region  Prompt: todos los datos que yo recibo de la prompt entran como "string"
 //los datos se pueden convertir siempre que esa conversión exista
 //"a" = number    NO  NaN -> error
@@ -57,53 +30,77 @@
 //mantener este sistema vivo en base a decisiones
 //#endregion
 
-let productos = [];
+let productos = []; //almacenar los productos de la lista
 let opcion = "";
+const mensaje_inicial =
+  "1 - Agregar Producto \n" +
+  "2 - Eliminar Producto \n" +
+  "3 - Ver lista de productos \n" +
+  "4 - Filtrar Lista \n" +
+  "5 - Salir \n";
 //Array es un tipo de dato, number, string
 //Array -> tipo de dato compuesto o complejo
 //función -> un algoritmo / lógica que se ejecuta
 //productos.push() dentro de push tenemos que escribir que es lo que queremos
-//que se almacene en el array
-//productos = [] = 0    productos = ["coca"] = 1
+//que se almacene en el array y se agrega el elemento en la ultima posición
+//productos.pop() no se escribe nada dentro del paréntesis y elimina el elemento
+//con mayor indice de nuestro array (recordemos que el indice lo obtenemos con n + 1)
+//productos = [] = 0 productos = ["coca"] = 1
 
-opcion = prompt(
-  "Por favor, ingrese una de las siguientes opciones: \n" +
-    "1 - Agregar Producto \n" +
-    "2 - Eliminar Producto \n" +
-    "3 - Ver lista de productos \n" +
-    "4 - Salir"
-);
+opcion = prompt(mensaje_inicial); //vamos a abarcar desde la opción 1 a la opción 4
 
-opcion = Number(opcion);
-
-while (opcion !== 4) {
+opcion = Number(opcion); //parseInt()
+//1
+while (opcion !== 5) {
   switch (opcion) {
     case 1:
-      let producto = prompt("Por favor ingrese el producto a la lista");
+      let producto = prompt("Por favor ingrese el producto a la lista"); //no podemos verificar que el usuario guarde un producto
       productos.push(producto);
-      opcion = prompt(
-        "Por favor, ingrese una de las siguientes opciones: \n" +
-          "1 - Agregar Producto \n" +
-          "2 - Eliminar Producto \n" +
-          "3 - Ver lista de productos \n" +
-          "4 - Salir"
-      );
+      opcion = prompt(mensaje_inicial);
       opcion = Number(opcion);
       break;
     case 2:
-      alert("Eliminar un producto");
+      let mensaje = "";
+      if (productos.length > 0) {
+        productos.pop();
+        mensaje = "Producto eliminado.";
+      } else {
+        mensaje = "No hay ningún producto para eliminar.";
+      }
+      opcion = prompt(mensaje + mensaje_inicial);
+      opcion = Number(opcion);
       break;
     case 3:
-      alert("Ver Lista");
+      if (productos.length !== 0) {
+        let lista = "";
+        for (let index = 0; index < productos.length; index++) {
+          const producto = productos[index];
+          lista += `- ${producto} \n`;
+        }
+        alert(lista);
+      } else {
+        alert("No hay ningun producto en la lista.");
+      }
+
+      opcion = prompt(mensaje_inicial);
+      opcion = Number(opcion);
       break;
     case 4:
-      opcion = 4;
+      let filtro = prompt("Por favor ingrese la inicial del producto");
+      opcion = prompt(mensaje_inicial);
+      opcion = Number(opcion);
       break;
-    default:
+    case 5:
+      opcion = 5;
+      break;
+    default: //el case default se ejecuta si ninguno de los casos contemplados se cumple
       alert(opcion);
       alert("Ingrese una de las opciones válidas, por favor.");
       break;
   }
+
+  //siguie acá en el while
 }
 
+//Nota: El último elemento de un array es siempre el que tiene el indice más alto
 console.log(productos);
