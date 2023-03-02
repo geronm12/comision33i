@@ -102,5 +102,86 @@ while (opcion !== 5) {
   //siguie acá en el while
 }
 
+const mensaje = "";
+//funciones/métodos o funcionalidades -> Lógica
+console.warn("hola mundo"); //fue creada por otro desarrollador
 //Nota: El último elemento de un array es siempre el que tiene el indice más alto
 console.log(productos);
+//muere
+let array = [];
+
+//Programación Parádigma   //Funciones del lenguaje
+/*  switch                          .push()  .pop() 
+    if else
+    for
+    while               
+*/
+
+//primero buscar el último elemento y obtener su indice  array.length - 1
+//[10,10,10]   =>  .length 3 - 1 = 2 array[ultimoIndice] = nuevoelemento;
+
+const cadena = "soy una cadena";
+const numero = 10;
+
+// // Al inicio del concurso los primeros lugares son para Ana, Oswaldo, Raúl, Celia,
+// María y Antonio  en ese respectivo orden.
+// // a) utilizando un array imprima los nombres de los ganadores.
+// // b) Y si ahora se pidiera que se imprimiera en consola los ganadores
+// del último al primero? (de atrás para adelante)
+// // c) Imprima en consola la cantidad de veces que se repite cada vocal
+//  en todos los nombres de los participantes.
+// // d) Imprima en consola los nombres que comiencen con la letra “A”
+
+//number, string, bool, Array -> tipos de datos
+
+//ej listas de super, carritos de compra, liostas de empleados, listas de productos para mostrar, listas de videos
+//mostrar en html todos los productos
+//mostrar la lista de productos para comprar
+// n - 1; n = cant. elementos - 1;
+//0        1        2        3       4          5       -> max index = 6
+
+//HardCodeo
+const concursantes = [
+  "Ana",
+  "Oswaldo",
+  "Raúl",
+  "Celia",
+  "María",
+  "Antonio",
+  "Gero",
+];
+//lo vamos a recibir de una BASE DE DATOS
+
+//IMPRIMIR TODOS LOS CONCURSANTES --> HARD CODEO
+console.log(concursantes[0]);
+console.log(concursantes[1]);
+console.log(concursantes[2]);
+console.log(concursantes[3]);
+console.log(concursantes[4]);
+console.log(concursantes[5]);
+
+//                     (mientras esta condición sea true, se sigue ejecutando el código)
+//    variable         condición           contador => aumentar de 1 en 1 la variable creada en la primera parte
+for (let index = 0; index < concursantes.length; index++) {
+  //llave 1      index++ => index = index + 1;
+  //el código que se encuentra dentro de estás llaves
+  //acá adentro se escribe el código que se va a repetir
+  const element = concursantes[index];
+  concursantes.push(1);
+
+  //console.log(element);
+} //llave 2
+
+//sigue acá
+//me da javascript => concursantes.reverse()  => AHORRA MUCHISIMO TIEMPO
+
+//index -- resta de uno en uno => index = index - 1;
+//5 6 10 1200
+const maxIndex = concursantes.length - 1;
+
+for (let index = maxIndex; index >= 0; index--) {
+  const element = concursantes[index];
+  //console.log(element);
+}
+
+console.log(concursantes.length);
