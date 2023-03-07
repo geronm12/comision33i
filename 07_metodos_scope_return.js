@@ -185,3 +185,32 @@ for (let index = maxIndex; index >= 0; index--) {
 }
 
 console.log(concursantes.length);
+
+//SOLUCION EJERCICIO EN CLASE
+
+let peces = [];
+let contador = 0;
+let peces_restantes = 5;
+
+while (contador < 5) {
+  let variable = prompt(
+    "Por favor ingresa el peso del pez, en total le faltan" +
+      peces_restantes +
+      "peces"
+  );
+  peces.push(variable);
+  contador++;
+  peces_restantes--;
+}
+
+let mayor = -9999;
+let menor = 9999;
+
+for (let index = 0; index < peces.length; index++) {
+  const element = peces[index];
+  if (element > mayor) {
+    mayor = element;
+  } else {
+    menor = element;
+  }
+}
