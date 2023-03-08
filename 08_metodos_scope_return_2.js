@@ -142,3 +142,9 @@ if (resultadoFinal > 440000) {
 } else {
   AlertarNoPagaImpuestos();
 }
+
+
+//Qué operación quiere hacer
+//Que valores va a utilizar (2 valores) -> NO USEN CICLOS
+//Operar con funciones (+, -, * , /)
+//Mostrar en un alert el resultado de la operación
