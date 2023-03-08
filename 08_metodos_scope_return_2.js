@@ -59,11 +59,11 @@ for (let index = 0; index < concursantes.length; index++) {
   }
 }
 
-console.log(a);
-console.log(e);
-console.log(i);
-console.log(o);
-console.log(u);
+// console.log(a);
+// console.log(e);
+// console.log(i);
+// console.log(o);
+// console.log(u);
 
 //fuertemente tipada-> se preocupa por lo que son los tipos
 //tipos de datos
@@ -75,9 +75,70 @@ for (let index = 0; index < concursantes.length; index++) {
   const concursante = concursantes[index];
 
   if (concursante[lowerIndex].toLowerCase() === "a") {
-    console.log(concursante);
+    // console.log(concursante);
   }
 }
 
 // const resultados = concursantes.filter((concursante) => concursante[0] === "A");
 // console.log(resultados);
+
+// const resultado = Suma(30, 100);
+// const resultadoB = Suma(40, 200);
+
+// let primerValor = prompt("Ingrese un valor");
+// primerValor = parseInt(primerValor);
+
+// let segundoValor = prompt("Ingrese el segundo valor");
+// segundoValor = parseInt(segundoValor);
+
+const primerValor = 10;
+const segundoValor = 10;
+//me devuelve la suma de ambos valores
+const rta = Suma(primerValor, segundoValor);
+
+//SUMA: Recibe Param y tiene retorno
+function Suma(a, b) {
+  //toma el primer valor y lo suma al segundo valor y lo devuelve
+  const resultado = a + b;
+  return resultado; //hardcodeo
+}
+
+//Multiplicar: Recibe Param y tiene retorno
+function Multiply(a, b) {
+  return a * b;
+}
+
+//Saludar: Recibe param no retorna nada
+function Saludar(nombre) {
+  const mensaje = `hola ${nombre}, cómo estás?`;
+  console.log(mensaje);
+}
+
+//ObtenerSueldoBase No recibe nada por param y devuelve algo
+function ObtenerSueldoBase() {
+  const sueldoBase = 60000;
+  return sueldoBase;
+}
+
+const antiguedad = 5;
+const montoPorAntiguedad = 3000;
+//Calculo de sueldo
+const sueldoPuro = ObtenerSueldoBase();
+const antiguendadCalculada = Multiply(antiguedad, montoPorAntiguedad);
+const resultadoFinal = Suma(sueldoPuro, antiguendadCalculada);
+console.log(resultadoFinal);
+
+//AlertarErrorNoControlado No recibe nada por param y no devuelve nada
+function AlertaPagaImpuestos() {
+  alert("Paga impuesto a las ganancias");
+}
+
+function AlertarNoPagaImpuestos() {
+  alert("No paga impuesto a las ganancias");
+}
+
+if (resultadoFinal > 440000) {
+  AlertaPagaImpuestos();
+} else {
+  AlertarNoPagaImpuestos();
+}
