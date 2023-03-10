@@ -15,7 +15,7 @@ const concursantes = ["Ana", "Oswaldo", "Raúl", "Celia", "María", "Antonio"];
 
 console.log(concursantes);
 
-let a = 0;
+//let a = 0;
 let e = 0;
 let i = 0;
 let o = 0;
@@ -97,11 +97,11 @@ const segundoValor = 10;
 const rta = Suma(primerValor, segundoValor);
 
 //SUMA: Recibe Param y tiene retorno
-function Suma(a, b) {
-  //toma el primer valor y lo suma al segundo valor y lo devuelve
-  const resultado = a + b;
-  return resultado; //hardcodeo
-}
+// function Suma(a, b) {
+//   //toma el primer valor y lo suma al segundo valor y lo devuelve
+//   const resultado = a + b;
+//   return resultado; //hardcodeo
+// }
 
 //Multiplicar: Recibe Param y tiene retorno
 function Multiply(a, b) {
@@ -143,6 +143,7 @@ if (resultadoFinal > 440000) {
   AlertarNoPagaImpuestos();
 }
 
+console.error("Falta cerrar un paréntesis");
 
 //Qué operación quiere hacer
 //Que valores va a utilizar (2 valores) -> NO USEN CICLOS

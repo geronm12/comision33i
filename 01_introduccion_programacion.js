@@ -4,7 +4,7 @@ let caracter = "a"; //char
 //#endregion
 
 //#region numbers
-let a = 10; //enteros
+//let a = 10; //enteros
 let b = 10.5; //decimal
 //#endregion
 

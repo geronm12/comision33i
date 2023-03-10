@@ -33,7 +33,7 @@ for (let index = 0; index < vector.length; index++) {
   console.log("Ejecutando desde el for");
 }
 
-const a = 10; //primitivo
+//const a = 10; //primitivo
 const b = 9;
 
 //do -> indica que debemos realizar la ejecución del código que se encuentra dentro
