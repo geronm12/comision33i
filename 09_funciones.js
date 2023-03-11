@@ -141,3 +141,12 @@ const concursantesInvertido = InvertirArray(concursantesArray);
 const pecesInvertido = InvertirArray(pecesArray);
 console.log(concursantesInvertido);
 console.log(pecesInvertido);
+
+let mensaje = "El usuario no tiene permisos";
+
+function Error() {
+  //cuando la función no retorne nada
+  //no necesariamente siempre va a ser console.log
+  alert(mensaje);
+}
+ 
