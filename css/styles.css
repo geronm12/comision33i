@@ -1,7 +1,39 @@
 body {
   text-align: center;
 }
-h1 {
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 30px;
+}
+
+.rojo {
+  font-weight: bold;
   color: red;
 }
 
+.azul {
+  font-weight: bold;
+  color: blue;
+}
+
+.nav-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 5px !important;
+}
+
+.card:hover {
+  cursor: pointer;
+  filter: opacity(0.5);
+}
